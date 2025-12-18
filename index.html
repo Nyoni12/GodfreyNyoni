@@ -1359,41 +1359,66 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-12">
-    <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-        <div class="mb-6 md:mb-0 text-center md:text-left">
-          <p class="text-2xl font-bold mb-2">Godfrey Nyoni</p>
-          <p class="text-gray-400">Systems Engineer & Technical Consultant</p>
-          <p class="text-gray-500 text-sm mt-2">Bridging technology and business solutions</p>
-        </div>
-        
-        <div class="flex space-x-6">
-          <a href="#hero" class="text-gray-400 hover:text-white transition">Home</a>
-          <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
-          <a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a>
-          <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
-        </div>
-      </div>
-      
-      <div class="border-t border-gray-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="text-center md:text-left mb-4 md:mb-0">
-            <p class="text-gray-500">© 2024 Godfrey Nyoni. All rights reserved.</p>
-            <p class="text-gray-600 text-sm mt-2">Designed & Developed with ❤️ by Godfrey Nyoni</p>
+      <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-8">
+          <div class="mb-6 md:mb-0 text-center md:text-left w-full md:w-auto">
+            <p class="text-2xl font-bold mb-2">Godfrey Nyoni</p>
+            <p class="text-gray-400 mb-1">Systems Engineer & Technical Consultant</p>
+            <p class="text-gray-500 text-sm">Bridging technology and business solutions</p>
           </div>
           
-          <div class="flex items-center">
-            <a href="#hero" class="bg-primary hover:bg-secondary text-white p-3 rounded-full inline-block transition transform hover:-translate-y-1">
-              <i class="fas fa-arrow-up"></i>
-            </a>
+          <div class="flex flex-col md:flex-row gap-6 md:gap-8 w-full md:w-auto">
+            <div>
+              <h4 class="font-bold mb-3 text-gray-300">Quick Links</h4>
+              <div class="flex flex-col space-y-2">
+                <a href="#hero" class="text-gray-400 hover:text-white transition text-sm">Home</a>
+                <a href="#about" class="text-gray-400 hover:text-white transition text-sm">About</a>
+                <a href="#portfolio" class="text-gray-400 hover:text-white transition text-sm">Portfolio</a>
+                <a href="#contact" class="text-gray-400 hover:text-white transition text-sm">Contact</a>
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-bold mb-3 text-gray-300">Services</h4>
+              <div class="flex flex-col space-y-2">
+                <a href="#services" class="text-gray-400 hover:text-white transition text-sm">Systems Engineering</a>
+                <a href="#services" class="text-gray-400 hover:text-white transition text-sm">Technical Consulting</a>
+                <a href="#services" class="text-gray-400 hover:text-white transition text-sm">Web Development</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 mt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+              <p class="text-gray-500 text-sm">© <span id="current-year">2024</span> Godfrey Nyoni. All rights reserved.</p>
+              <p class="text-gray-600 text-xs mt-2">Designed & Developed with ❤️ by Godfrey Nyoni</p>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="flex space-x-3">
+                <a href="https://linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="text-gray-400 hover:text-white transition">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/nyoni12" target="_blank" class="text-gray-400 hover:text-white transition">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/GodfreyNyoni7" target="_blank" class="text-gray-400 hover:text-white transition">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+              <a href="#hero" class="bg-primary hover:bg-secondary text-white p-3 rounded-full inline-block transition transform hover:-translate-y-1 ml-4">
+                <i class="fas fa-arrow-up"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
+    </footer>
+  </main>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     // Initialize AOS
@@ -1542,8 +1567,7 @@
     });
 
     // Update current year in footer
-    document.querySelector('footer .text-gray-500').innerHTML = 
-      document.querySelector('footer .text-gray-500').innerHTML.replace('2024', new Date().getFullYear());
+    document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
