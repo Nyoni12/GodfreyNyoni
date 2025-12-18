@@ -29,23 +29,68 @@
   <link href="assets/img/logo.webp" rel="icon">
   <link href="assets/img/logo.webp" rel="apple-touch-icon">
 
-  <!-- Preload important resources -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"></noscript>
-
-  <!-- Preconnect to important domains -->
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3B82F6',
+            secondary: '#1E40AF',
+            dark: '#0F172A',
+            light: '#F8FAFC',
+            accent: '#06B6D4'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'gradient': 'gradient 8s ease infinite',
+            'slide-in': 'slideIn 0.5s ease-out',
+            'fade-in': 'fadeIn 0.8s ease-out'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            gradient: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' }
+            },
+            slideIn: {
+              '0%': { transform: 'translateX(-100%)', opacity: '0' },
+              '100%': { transform: 'translateX(0)', opacity: '1' }
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            }
+          }
+        }
+      }
+    }
+  </script>
   
   <!-- Schema.org markup for Google -->
   <script type="application/ld+json">
@@ -71,846 +116,839 @@
     }
   }
   </script>
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .section-title h2 {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(90deg, #3B82F6, #06B6D4);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    
+    .skill-bar {
+      transition: width 1.5s ease-in-out;
+    }
+    
+    .portfolio-item {
+      transition: all 0.3s ease;
+    }
+    
+    .portfolio-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .typewriter {
+      overflow: hidden;
+      border-right: 3px solid #3B82F6;
+      white-space: nowrap;
+      animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #3B82F6; }
+    }
+    
+    .nav-link {
+      position: relative;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #3B82F6;
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(-45deg, #0F172A, #1E293B, #334155, #475569);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+  </style>
 </head>
 
-<body class="index-page">
+<body class="bg-gray-50 text-gray-800 font-inter">
+  <!-- Mobile Menu Button -->
+  <div class="fixed top-4 right-4 z-50 lg:hidden">
+    <button id="mobile-menu-button" class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition">
+      <i class="fas fa-bars text-xl"></i>
+    </button>
+  </div>
 
-  <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
-
-    <div class="profile-img">
-      <img src="assets/img/p2.webp" alt="Godfrey Nyoni" class="img-fluid rounded-circle">
-    </div>
-
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">Godfrey Nyoni</h1>
-    </a>
-
-    <div class="social-links text-center">
-      <a href="https:x.com/GodfreyNyoni7?+=DYQSopSQ9tEBtUtMqhSrBA&s=09" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="https:www.facebook.com/godfrey.nyoni.961" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://www.instagram.com/godfrey_nyoni_17?igsh=dWMyam9ibjg3Yjd5" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/godfrey-nyoni-1166b0158?utm_source=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://github.com/nyoni12" class="github"><i class="bi bi-github"></i></a>
-    </div>
-
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="fixed inset-0 bg-dark bg-opacity-95 z-40 hidden flex flex-col justify-center items-center">
+    <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">
+      <i class="fas fa-times"></i>
+    </button>
+    <nav class="text-center">
+      <ul class="space-y-8">
+        <li><a href="#hero" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Home</a></li>
+        <li><a href="#about" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">About</a></li>
+        <li><a href="#skills" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Skills</a></li>
+        <li><a href="#resume" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Resume</a></li>
+        <li><a href="#portfolio" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Portfolio</a></li>
+        <li><a href="#services" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Services</a></li>
+        <li><a href="#contact" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Contact</a></li>
       </ul>
     </nav>
+  </div>
 
-  </header>
-
-  <main class="main">
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-
-      <img src="assets/img/p1.webp" alt="Godfrey Nyoni" data-aos="fade-in" class="">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Godfrey Nyoni</h2>
-        <p>I'm <span class="typed" data-typed-items="Software Engineer, Web Developer,Data Analyst, Freelancer, Web Analyst, Big Data Analyst, Cutting Edge Technology Researcher">Software Engineer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+  <!-- Sidebar Navigation (Desktop) -->
+  <aside class="hidden lg:block fixed top-0 left-0 h-full w-64 bg-dark text-white z-30 shadow-2xl">
+    <div class="p-8 flex flex-col items-center h-full">
+      <!-- Profile Image -->
+      <div class="mb-8 animate-float">
+        <img src="assets/img/p2.webp" alt="Godfrey Nyoni" class="w-40 h-40 rounded-full object-cover border-4 border-primary shadow-lg">
       </div>
+      
+      <!-- Name -->
+      <h1 class="text-2xl font-bold mb-2 text-center">Godfrey Nyoni</h1>
+      <p class="text-gray-400 text-sm mb-8 text-center">Full-Stack Developer & Data Analyst</p>
+      
+      <!-- Navigation -->
+      <nav class="w-full mb-12">
+        <ul class="space-y-4">
+          <li><a href="#hero" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-home mr-3"></i> Home</a></li>
+          <li><a href="#about" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-user mr-3"></i> About</a></li>
+          <li><a href="#skills" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-code mr-3"></i> Skills</a></li>
+          <li><a href="#resume" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-file-alt mr-3"></i> Resume</a></li>
+          <li><a href="#portfolio" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-briefcase mr-3"></i> Portfolio</a></li>
+          <li><a href="#services" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-cogs mr-3"></i> Services</a></li>
+          <li><a href="#contact" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-envelope mr-3"></i> Contact</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Social Links -->
+      <div class="flex space-x-4 mb-8">
+        <a href="https://x.com/GodfreyNyoni7" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/godfrey.nyoni.961" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/godfrey_nyoni_17" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/nyoni12" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-github"></i></a>
+      </div>
+      
+      <!-- Copyright -->
+      <p class="text-gray-500 text-sm mt-auto">© 2024 Godfrey Nyoni</p>
+    </div>
+  </aside>
 
-    </section><!-- /Hero Section -->
+  <!-- Main Content -->
+  <main class="lg:ml-64">
+    <!-- Hero Section -->
+    <section id="hero" class="gradient-bg min-h-screen flex items-center relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full opacity-10 animate-float"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full opacity-10 animate-float" style="animation-delay: 2s;"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col lg:flex-row items-center">
+          <div class="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in" data-aos="fade-right">
+            <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6">
+              Godfrey <span class="text-primary">Nyoni</span>
+            </h1>
+            <div class="typewriter mb-8">
+              <p class="text-2xl lg:text-3xl text-gray-300">
+                I'm a <span class="text-primary font-semibold" id="typed-text">Full-Stack Developer</span>
+              </p>
+            </div>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl">
+              Professional system developer and web developer with expertise in data analysis and emerging technologies. Specializing in full-stack development, data visualization, and innovative tech solutions.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition transform hover:-translate-y-1 shadow-lg">
+                Get In Touch
+              </a>
+              <a href="#portfolio" class="bg-transparent border-2 border-white hover:border-primary text-white hover:text-primary font-semibold py-3 px-8 rounded-lg transition transform hover:-translate-y-1">
+                View My Work
+              </a>
+            </div>
+          </div>
+          <div class="lg:w-1/2 flex justify-center animate-fade-in" data-aos="fade-left">
+            <div class="relative">
+              <img src="assets/img/p1.webp" alt="Godfrey Nyoni" class="rounded-2xl shadow-2xl w-full max-w-lg border-8 border-white">
+              <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl">
+                <p class="text-2xl font-bold">5+</p>
+                <p class="text-sm">Years Experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <a href="#about" class="text-white animate-bounce">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">About Me</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            👋 Hi! I'm Godfrey Nyoni, a versatile technology professional with a passion for solving complex problems and transforming data into actionable insights.
+          </p>
+        </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>About Me</h2>
-        <p>👋 Hi! I’m Godfrey Nyoni, a versatile technology professional with a passion for solving complex problems and transforming data into actionable insights. My expertise spans <b>software engineering</b>, <b>full-stack web development</b>,
-           <b>data analysis</b>, and <b>big data systems</b>, allowing me to bridge the gap between technology and business impact.
-          <br><br>As a <b>freelancer</b>, I’ve worked with startups and enterprises alike, adapting to diverse project needs and delivering tailored solutions. Whether architecting scalable web applications, optimizing data pipelines, or researching emerging 
-          technologies like AI/ML, blockchain, and cloud-native tools, my focus is always on efficiency, innovation, and user-centric design.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/p1.webp" class="img-fluid" alt="Godfrey Nyoni">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/3" data-aos="fade-right">
+            <img src="assets/img/p1.webp" alt="Godfrey Nyoni" class="rounded-2xl shadow-xl w-full">
           </div>
-          <div class="col-lg-8 content">
-            <h2>Personal lnfo</h2>
-            <p class="fst-italic py-3">
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>17 February 1997</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>nyoni12github/GodfreyNyoni</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+263 712 172 870</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Bulawayo, Zimbabwe</span></li>
-                </ul>
+          
+          <div class="lg:w-2/3" data-aos="fade-left">
+            <h3 class="text-2xl font-bold text-dark mb-6">Personal Information</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <i class="fas fa-birthday-cake text-primary mr-4"></i>
+                  <div>
+                    <p class="font-semibold">Birthday</p>
+                    <p class="text-gray-600">17 February 1997</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-phone text-primary mr-4"></i>
+                  <div>
+                    <p class="font-semibold">Phone</p>
+                    <p class="text-gray-600">+263 712 172 870</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-map-marker-alt text-primary mr-4"></i>
+                  <div>
+                    <p class="font-semibold">Location</p>
+                    <p class="text-gray-600">Bulawayo, Zimbabwe</p>
+                  </div>
+                </div>
               </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Gender:</strong> <span>Male</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Bachelors</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>godfrey12nyoni@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
+              
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <i class="fas fa-envelope text-primary mr-4"></i>
+                  <div>
+                    <p class="font-semibold">Email</p>
+                    <p class="text-gray-600">godfrey12nyoni@gmail.com</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-graduation-cap text-primary mr-4"></i>
+                  <div>
+                    <p class="font-semibold">Degree</p>
+                    <p class="text-gray-600">Bachelors</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-briefcase text-primary mr-4"></i>
+                  <div>
+                    <p class="font-semibold">Freelance</p>
+                    <p class="text-gray-600">Available</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <h2>Why Work With Me?</h2>
-            <p class="py-3">
-              I don’t just write code I collaborate to create meaningful, results-driven solutions. My experience in freelancing has taught me the value of clear communication, agility, and delivering measurable impact. When I’m not developing or analyzing data, I’m exploring the latest tech trends, contributing to open-source projects, or mentoring aspiring developers.
-               <br><br>
-              Let’s connect and build something amazing together!
+            
+            <h3 class="text-2xl font-bold text-dark mb-6">Why Work With Me?</h3>
+            <p class="text-gray-600 mb-6">
+              I don't just write code—I collaborate to create meaningful, results-driven solutions. My experience in freelancing has taught me the value of clear communication, agility, and delivering measurable impact.
+            </p>
+            <p class="text-gray-600">
+              When I'm not developing or analyzing data, I'm exploring the latest tech trends, contributing to open-source projects, or mentoring aspiring developers.
+              <br><br>
+              Let's connect and build something amazing together!
             </p>
           </div>
         </div>
-
       </div>
-
-    </section><!-- /About Section -->
-
-    <!-- Stats Section -->
+    </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>I bring a diverse skill set that spans software development, data analytics, and research in emerging technologies. My expertise enables me to build scalable applications, uncover valuable insights from data, and stay ahead in the ever-evolving tech landscape. Below is a breakdown of the key skills I bring to every project.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Django</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Php</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-            <div class="progress">
-              <span class="skill"><span>Pandas</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-            <div class="progress">
-              <span class="skill"><span>Power Bi</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6">
-            <div class="progress">
-              <span class="skill"><span>Tableau</span> <i class="val">80%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Java Script</span> <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-            <div class="progress">
-              <span class="skill"><span>Research</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">My Skills</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            I bring a diverse skill set that spans software development, data analytics, and research in emerging technologies.
+          </p>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div data-aos="fade-right">
+            <!-- Skill 1 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Django</span>
+                <span class="font-semibold text-primary">100%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+              </div>
+            </div>
+            
+            <!-- Skill 2 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Python</span>
+                <span class="font-semibold text-primary">100%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+              </div>
+            </div>
+            
+            <!-- Skill 3 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">PHP</span>
+                <span class="font-semibold text-primary">90%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+            
+            <!-- Skill 4 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Pandas</span>
+                <span class="font-semibold text-primary">90%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div data-aos="fade-left">
+            <!-- Skill 5 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Power BI</span>
+                <span class="font-semibold text-primary">90%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+            
+            <!-- Skill 6 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">HTML/CSS</span>
+                <span class="font-semibold text-primary">100%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+              </div>
+            </div>
+            
+            <!-- Skill 7 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">JavaScript</span>
+                <span class="font-semibold text-primary">75%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 75%;"></div>
+              </div>
+            </div>
+            
+            <!-- Skill 8 -->
+            <div class="mb-8">
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold">Research</span>
+                <span class="font-semibold text-primary">100%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </section><!-- /Skills Section -->
+    </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>I am a results driven Software Engineer, Web Developer, and Data Analyst with a passion for leveraging technology to solve complex problems. With experience in full-stack development, data analytics, and emerging technologies, I have successfully delivered innovative, scalable solutions for a wide range of projects.
-
-          My expertise spans across web development, big data systems, and researching cutting-edge technologies such as AI, machine learning, and blockchain. Whether building intuitive web applications, analyzing data to drive business decisions, or exploring new tech trends, I am dedicated to delivering impactful results.
-          
-          Combining technical expertise with a problem-solving mindset, I excel in fast-paced environments where clear communication, adaptability, and collaboration are key. I am always eager to contribute to projects that challenge my skills and push technological boundaries.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Personal Information</h3>
-
-            <div class="resume-item pb-0">
-              <h4>Godfrey Nyoni</h4>
-              <ul>
-                <li>178 Nguboyenja, Bulawayo, Zimbabwe</li>
-                <li>+263 712 172 870/+263 771 940 258</li>
-                <li>godfrey12nyoni@gmail.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelors Degree In Information Systems</h4>
-              <h5>2018 - 2022</h5>
-              <p><em>Midlands State University, Gweru, Zimbabwe</em></p>
-            </div><!-- Edn Resume Item -->
-            <h3 class="resume-title">Cetifications</h3>
-            <div class="resume-item">
-              <h4>HCIA-Cloud Computing V4.0 Course</h4>
-              <h5>September 2021</h5>
-              <p><em>Huawei</em></p>
-              <p></p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Data Analysis Industry Training</h4>
-              <h5>June 2022</h5>
-              <p><em>Brainnest</em></p>
-              <p></p>
-            </div><!-- Edn Resume Item -->
-            <h3 class="resume-title">Achievements</h3>
-            <div class="resume-item">
-              <h4>First Class Degree</h4>
-              <p><em>First class degree in Information Systems Degree</em></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Paynow award for the best undergraduate student in the department</h4>
-              <p><em>Best undergraduate student in the Information Systems department at Midlands State University</em></p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>NICOZ Diamond Award for the best student in the department</h4>
-              <p><em>Best student in the Information Systems department at Midlands State University</em></p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Stanbic Award for the best student in Information Systems</h4>
-              <p><em>Best student in Information Systems at Midlands State University</em></p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>MSU Book prize</h4>
-              <p><em>An award which is given by Midlands State University to a student who would have displayed
-                exceptional ability in terms of learning. It is one of the most decorated award at the university
-                graduation</em></p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h3 class="resume-title">Languages</h3>
-              <ul>
-                <li>English</li>
-                <li>IsiNdebele</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Software Engineer & Programmer</h4>
-              <h5>2024 - Present</h5>
-              <p><em>Pique Squid, Harare, Zimbabwe</em></p>
-              <ul>
-                <li>Designing, developing, testing, and maintaining software applications. Writing efficient code, debugging, and collaborating with teams to build scalable solutions.</li>
-                <li>Creating and maintaining websites, ensuring responsiveness and performance. Working with front-end and back-end technologies, optimizing user experience, and implementing security best practices.</li>
-                <li>Ensuring seamless integration of various software components, APIs, and third-party services to enhance functionality.</li>
-                <li>Writing clear documentation for code, systems, and processes to assist future development and troubleshooting.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Web Analyst Intern</h4>
-              <h5>2023 - 2025</h5>
-              <p><em>City Of Bulawayo, Bulawayo, Zimbabwe</em></p>
-              <ul>
-                <li>Web development</li>
-                <li>Data Collection & Analysis: Gathering website and user data using analytics tools like Google Analytics and Power BI to identify trends.</li>
-                <li>Performance Monitoring: Tracking key metrics such as traffic, conversions, and user behavior to assess website effectiveness.</li>
-                <li>Reporting & Insights: Creating reports and visualizations to provide actionable insights for improving digital strategies.</li>
-                <li>Server Configuration and management</li>
-                <li>Call Centre Management</li>
-                <li>Email Service Management</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h3 class="resume-title">Interests</h3>
-              <ul>
-                <li>Football</li>
-                <li>Movies</li>
-                <li>Reading</li>
-                <li>Music</li>
-                <li>Travelling</li>
-                <li>Deejaying</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <h3 class="resume-title"> References</h3>
-
-            <div class="resume-item pb-0">
-              <h4> Dr M Zhou</h4>
-              <ul>
-                <li>Senior Lecturer, Midlands State University</li>
-                <li>+263 712307951</li>
-                <li>zhoum@staff.msu.ac.zw</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item pb-0">
-              <h4>Mr C Mavhima</h4>
-              <ul>
-                <li>Systems Administrator, Zimbabwe Power Company</li>
-                <li>+263 773410871</li>
-                <li>CostaMavhim@zpc.co.zw</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item pb-0">
-              <h4>Mpazamiso Ndebele</h4>
-              <ul>
-                <li>ICT Manager, City of Bulawayo</li>
-                <li>+263 77 478 7580</li>
-                <li> mndebele@citybyo.co.zw</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item pb-0">
-              <h4>Walter Maira</h4>
-              <ul>
-                <li>Executive Director, Pique Squid</li>
-                <li>+263 78 652 6527</li>
-                <li>walter@piquesquid.com</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-          </div>
+    <section id="resume" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">My Resume</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Results-driven Software Engineer, Web Developer, and Data Analyst with a passion for leveraging technology to solve complex problems.
+          </p>
         </div>
 
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Left Column -->
+          <div data-aos="fade-right">
+            <h3 class="text-2xl font-bold text-dark mb-8">Education & Certifications</h3>
+            
+            <div class="space-y-8">
+              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+                <h4 class="text-xl font-semibold mb-2">Bachelors Degree In Information Systems</h4>
+                <p class="text-primary font-medium mb-2">2018 - 2022</p>
+                <p class="text-gray-600">Midlands State University, Gweru, Zimbabwe</p>
+              </div>
+              
+              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-accent">
+                <h4 class="text-xl font-semibold mb-2">HCIA-Cloud Computing V4.0 Course</h4>
+                <p class="text-primary font-medium mb-2">September 2021</p>
+                <p class="text-gray-600">Huawei</p>
+              </div>
+              
+              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+                <h4 class="text-xl font-semibold mb-2">Data Analysis Industry Training</h4>
+                <p class="text-primary font-medium mb-2">June 2022</p>
+                <p class="text-gray-600">Brainnest</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold text-dark mb-8">Professional Experience</h3>
+            
+            <div class="space-y-8">
+              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
+                <h4 class="text-xl font-semibold mb-2">Software Engineer & Programmer</h4>
+                <p class="text-primary font-medium mb-2">2024 - Present</p>
+                <p class="text-gray-600 mb-3">Pique Squid, Harare, Zimbabwe</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                  <li>Designing, developing, testing, and maintaining software applications</li>
+                  <li>Creating and maintaining websites</li>
+                  <li>Ensuring seamless integration of various software components</li>
+                </ul>
+              </div>
+              
+              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-accent">
+                <h4 class="text-xl font-semibold mb-2">Web Analyst Intern</h4>
+                <p class="text-primary font-medium mb-2">2023 - 2025</p>
+                <p class="text-gray-600 mb-3">City Of Bulawayo, Bulawayo, Zimbabwe</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                  <li>Web development</li>
+                  <li>Data Collection & Analysis</li>
+                  <li>Performance Monitoring</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </section><!-- /Resume Section -->
+    </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Here’s a collection of projects that showcase my expertise in software development, web development, data analytics, and emerging technologies. Each project reflects my ability to create scalable applications, intuitive user experiences, and data-driven solutions that solve real-world problems. From full-stack web applications to big data processing and cutting-edge research, my portfolio highlights a diverse range of work tailored for startups, businesses, and individual clients. Feel free to explore my projects to see how I approach problem-solving, design, and implementation.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
-
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-web">Web Development</li>
-            <li data-filter=".filter-data">Data Analytics</li>
-            <li data-filter=".filter-big">Big Data</li>
-            <li data-filter=".filter-res">Research Articles</li>
-          </ul><!-- End Portfolio Filters -->
-
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <a href="kingdompaints.co.zw"><img src="assets/img/portfolio/web1.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Kingdom Paints</h4>
-                  <p>Kingdom Paints</p>
-                  <a href="kingdompaints.co.zw" title="web1"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="kingompaints.co.zw" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <a href="https://snoutsprout.com/"><img src="assets/img/portfolio/web2.webp" class="img-fluid" alt="Godfrey Nyoni"height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Snout & Sprout</h4>
-                  <p>Snout & Sprout</p>
-                  <a href="https://snoutsprout.com/" title="Web 1"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://snoutsprout.com/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-big">
-              <div class="portfolio-content h-100">
-                <a href="#"><img src="assets/img/portfolio/big1.webp" class="img-fluid" alt="Godfrey Nyoni"height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Big Data</h4>
-                  <p>Big Data Analytics</p>
-                  <a href="#" title="Big Data 1"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-res">
-              <div class="portfolio-content h-100">
-                <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/176#Thursday%2020%20March%202025/20"><img src="assets/img/portfolio/1.webp" class="img-fluid" alt="Protecting Zim's digital Economy" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Protecting Zim's digital Economy</h4>
-                  <p>AI Article</p>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/176#Thursday%2020%20March%202025/20" title="Protecting Zim's digital Economy"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/176#Thursday%2020%20March%202025/20" title="More details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data">
-              <div class="portfolio-content h-100">
-                <a href="#"><img src="assets/img/portfolio/data 1.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Data Analytics</h4>
-                  <p>Data Analytics</p>
-                  <a href="#" title="Data 2" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data">
-              <div class="portfolio-content h-100">
-                <a href="#"><img src="assets/img/portfolio/data 2.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Data Analytics</h4>
-                  <p>Data Analytics</p>
-                  <a href="#" title="Product 2" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-big">
-              <div class="portfolio-content h-100">
-                <a href="#"><img src="assets/img/portfolio/big2.webp" class="img-fluid" alt="Big data" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Big Data</h4>
-                  <p>Big Data Analytics</p>
-                  <a href="#" title="Branding 2" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-res">
-              <div class="portfolio-content h-100">
-                <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/177#Thursday%2027%20March%202025/18"><img src="assets/img/portfolio/2.webp" class="img-fluid" alt="AI and the Zim workforce: Job creator or destroyer?" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>AI and the Zim workforce: Job creator or destroyer?</h4>
-                  <p>AI Article</p>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/177#Thursday%2027%20March%202025/18" title="AI and the Zim workforce: Job creator or destroyer?" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/177#Thursday%2027%20March%202025/18" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <a href="https://nyoni12.github.io/Cast"><img src="assets/img/portfolio/web3.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Cast</h4>
-                  <p>Cast</p>
-                  <a href="https://nyoni12.github.io/Cast" title="Web 3"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://nyoni12.github.io/Cast" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <a href="https://nyoni12.github.io/Mike/mikeportfolio-main"><img src="assets/img/portfolio/web4.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Mike</h4>
-                  <p>Mike's Portfolio</p>
-                  <a href="https://nyoni12.github.io/Mike/mikeportfolio-main" title="Product 3"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://nyoni12.github.io/Mike/mikeportfolio-main" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-big">
-              <div class="portfolio-content h-100">
-                <a href="#"><img src="assets/img/portfolio/big 3.webp" class="img-fluid" alt="Big data" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Big Data</h4>
-                  <p>Big Data Analytics</p>
-                  <a href="#" title="Branding 2"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-res">
-              <div class="portfolio-content h-100">
-                <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/178#Thursday%203%20April%202025/19"><img src="assets/img/portfolio/3.webp" class="img-fluid" alt="How Zim business can use AI to stay competitive" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>How Zim business can use AI to stay competitive</h4>
-                  <p>AI Article</p>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/178#Thursday%203%20April%202025/19" title="How Zim business can use AI to stay competitive"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/178#Thursday%203%20April%202025/19" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <a href="https://nyoni12.github.io/Bamu/index.html"><img src="assets/img/portfolio/web5.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Tsunga Bamu Lawyers</h4>
-                  <p>Tsunga Bamu Lawyers</p>
-                  <a href="https://nyoni12.github.io/Bamu/index.html" title="Tsunga Bamu Lawyers"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://nyoni12.github.io/Bamu/index.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-res">
-              <div class="portfolio-content h-100">
-                <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/179#Thursday%2010%20April%202025/21"><img src="assets/img/portfolio/4.webp" class="img-fluid" alt="Can AI solve Zim's medical challenges?" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Can AI solve Zim's medical challenges?</h4>
-                  <p>AI Article</p>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/179#Thursday%2010%20April%202025/21" title="How Zim business can use AI to stay competitive"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/179#Thursday%2010%20April%202025/21" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-web">
-              <div class="portfolio-content h-100">
-                <a href="https://nyoni12.github.io/HarvchanSite/"><img src="assets/img/portfolio/web6.webp" class="img-fluid" alt="Godfrey Nyoni" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Harvchan Hardware Store</h4>
-                  <p>Harvchan Hardware Store</p>
-                  <a href="https://nyoni12.github.io/HarvchanSite/" title="Harvchan Hardware Store"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://nyoni12.github.io/HarvchanSite/" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-res">
-              <div class="portfolio-content h-100">
-                <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/180#Thursday%2017%20April/19"><img src="assets/img/portfolio/5.webp" class="img-fluid" alt="Does Zimbabwe need AI regulations?" height="300px"></a>
-                <div class="portfolio-info">
-                  <h4>Does Zimbabwe need AI regulations?</h4>
-                  <p>AI Article</p>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/180#Thursday%2017%20April/19" title="How Zim business can use AI to stay competitive"  class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/180#Thursday%2017%20April/19" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-          </div><!-- End Portfolio Container -->
-
+    <section id="portfolio" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">My Portfolio</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Here's a collection of projects that showcase my expertise in software development, web development, data analytics, and emerging technologies.
+          </p>
         </div>
 
-      </div>
+        <!-- Portfolio Filter -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+          <button class="filter-btn bg-primary text-white px-6 py-2 rounded-full font-medium transition hover:bg-secondary" data-filter="all">All</button>
+          <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="web">Web Development</button>
+          <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="data">Data Analytics</button>
+          <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="research">Research Articles</button>
+        </div>
 
-    </section><!-- /Portfolio Section -->
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Portfolio Item 1 -->
+          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-web" data-aos="fade-up">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/portfolio/web1.webp" alt="Kingdom Paints" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Kingdom Paints</h4>
+              <p class="text-gray-600 mb-4">Professional paint company website</p>
+              <a href="kingdompaints.co.zw" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                View Project <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 2 -->
+          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-web" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/portfolio/web2.webp" alt="Snout & Sprout" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Snout & Sprout</h4>
+              <p class="text-gray-600 mb-4">Pet care and gardening e-commerce site</p>
+              <a href="https://snoutsprout.com/" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                View Project <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 3 -->
+          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-research" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/portfolio/1.webp" alt="AI Article" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Protecting Zim's Digital Economy</h4>
+              <p class="text-gray-600 mb-4">AI Research Article</p>
+              <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/176" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                Read Article <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 4 -->
+          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-data" data-aos="fade-up">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/portfolio/data 1.webp" alt="Data Analytics" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Data Analytics Dashboard</h4>
+              <p class="text-gray-600 mb-4">Business intelligence dashboard</p>
+              <a href="#" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                View Project <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 5 -->
+          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-web" data-aos="fade-up" data-aos-delay="100">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/portfolio/web5.webp" alt="Law Firm Website" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Tsunga Bamu Lawyers</h4>
+              <p class="text-gray-600 mb-4">Law firm website design</p>
+              <a href="https://nyoni12.github.io/Bamu/index.html" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                View Project <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Portfolio Item 6 -->
+          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-research" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-64 overflow-hidden">
+              <img src="assets/img/portfolio/3.webp" alt="AI Article" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">AI in Zimbabwean Business</h4>
+              <p class="text-gray-600 mb-4">Competitive AI strategies article</p>
+              <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/178" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
+                Read Article <i class="fas fa-arrow-right ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Services Section -->
-    <section id="services" class="services section">
+    <section id="services" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">My Services</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            I offer a range of technology-driven solutions designed to help businesses and individuals achieve their goals.
+          </p>
+        </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Services</h2>
-        <p>I offer a range of technology-driven solutions designed to help businesses and individuals achieve their goals. With expertise in software development, web development, data analytics, and emerging technologies, I deliver high-quality, scalable, and innovative solutions tailored to your needs.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Web Development</a></h4>
-              <p class="description">Building responsive, high-performance websites and web applications.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:border-primary transition group" data-aos="fade-up">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <i class="fas fa-code text-2xl"></i>
             </div>
+            <h3 class="text-xl font-bold mb-4">Web Development</h3>
+            <p class="text-gray-600">
+              Building responsive, high-performance websites and web applications with modern frameworks and best practices.
+            </p>
           </div>
-          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Data Analytics & Big Data </a></h4>
-              <p class="description">Transforming raw data into valuable insights for smarter decision-making.</p>
+          <!-- Service 2 -->
+          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:border-primary transition group" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <i class="fas fa-chart-bar text-2xl"></i>
             </div>
-          </div><!-- End Service Item -->
+            <h3 class="text-xl font-bold mb-4">Data Analytics & Big Data</h3>
+            <p class="text-gray-600">
+              Transforming raw data into valuable insights for smarter decision-making using Power BI, Tableau, and Python.
+            </p>
+          </div>
 
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Research On Emerging Technologies</a></h4>
-              <p class="description">Exploring AI, blockchain, and cloud computing to drive innovation.</p>
+          <!-- Service 3 -->
+          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:border-primary transition group" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <i class="fas fa-brain text-2xl"></i>
             </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Freelance Consulting</a></h4>
-              <p class="description">Providing expert guidance on technology strategies and digital solutions</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
-            <div>
-              <h4 class="title"><a href="#" class="stretched-link">Software Development</a></h4>
-              <p class="description">Crafting custom software solutions for businesses and startups.</p>
-            </div>
-          </div><!-- End Service Item -->
-
+            <h3 class="text-xl font-bold mb-4">Emerging Tech Research</h3>
+            <p class="text-gray-600">
+              Exploring AI, blockchain, and cloud computing to drive innovation and stay ahead of technology trends.
+            </p>
+          </div>
         </div>
-
       </div>
-
-    </section><!-- /Services Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section light-background">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Don’t just take my word for it—here’s what clients and collaborators have to say about working with me. From software development and web design to data analytics and emerging technologies, I strive to deliver high-quality solutions that make a real impact.
-           These testimonials reflect my commitment to innovation, problem-solving, and client satisfaction. Scroll through to see how my expertise has helped businesses and individuals achieve their goals.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script><!-- 
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-              </div>
-            </div>End testimonial item --
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><-- End testimonial item --
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><-- End testimonial item -
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><-- End testimonial item 
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><-- End testimonial item 
-
-          </div>-->
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Have a project in mind or just want to connect? I’d love to hear from you! Whether you’re looking for a software developer, web expert, data analyst, or tech researcher, I’m always open to new opportunities and collaborations. Feel free to reach out via email, phone, or social media, and I’ll get back to you as soon as possible.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>178 Nguboyenja, Bulawayo, Zimbabwe</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+263 712 172 870/ +263 771 940 258</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>godfrey12nyoni@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <img src="assets/img/logo.webp" class="img-fluid" alt="">
-          </div>
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">Get In Touch</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Have a project in mind or just want to connect? I'd love to hear from you!
+          </p>
         </div>
 
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Contact Info -->
+          <div data-aos="fade-right">
+            <div class="space-y-8">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-6">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Address</h3>
+                  <p class="text-gray-600">178 Nguboyenja, Bulawayo, Zimbabwe</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-6">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Call Me</h3>
+                  <p class="text-gray-600">+263 712 172 870</p>
+                  <p class="text-gray-600">+263 771 940 258</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-6">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Email Me</h3>
+                  <p class="text-gray-600">godfrey12nyoni@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12">
+              <h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
+              <div class="flex space-x-4">
+                <a href="https://linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/nyoni12" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/GodfreyNyoni7" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/godfrey.nyoni.961" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Image/Map Placeholder -->
+          <div data-aos="fade-left" class="flex items-center justify-center">
+            <div class="relative">
+              <img src="assets/img/logo.webp" alt="Godfrey Nyoni Logo" class="rounded-2xl shadow-xl max-w-md">
+              <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl">
+                <p class="text-lg font-bold text-dark">Available for</p>
+                <p class="text-primary font-bold text-xl">Freelance Projects</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-    </section><!-- /Contact Section -->
-
+    </section>
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Godfrey Nyoni</strong> <span>All Rights Reserved</span></p>
-      </div>
-      <div class="credits">
-        Designed by <a href="">Godfrey Nyoni</a>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <p class="text-lg font-bold">Godfrey Nyoni</p>
+          <p class="text-gray-400">Full-Stack Developer & Data Analyst</p>
+        </div>
+        <div class="text-center">
+          <p class="text-gray-400">© 2024 Godfrey Nyoni. All Rights Reserved.</p>
+          <p class="text-gray-500 text-sm mt-2">Designed & Developed by Godfrey Nyoni</p>
+        </div>
+        <div>
+          <a href="#hero" class="bg-primary hover:bg-secondary text-white p-3 rounded-full inline-block transition transform hover:-translate-y-1">
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
       </div>
     </div>
-
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100
+    });
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    // Mobile menu functionality
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.remove('hidden');
+      document.getElementById('mobile-menu').classList.add('flex');
+    });
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    document.getElementById('close-menu').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.add('hidden');
+      document.getElementById('mobile-menu').classList.remove('flex');
+    });
 
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.add('hidden');
+        document.getElementById('mobile-menu').classList.remove('flex');
+      });
+    });
 
+    // Typing animation
+    const typedText = document.getElementById('typed-text');
+    const roles = ['Full-Stack Developer', 'Data Analyst', 'Web Developer', 'Software Engineer', 'Tech Researcher'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+
+    function typeWriter() {
+      const currentRole = roles[roleIndex];
+      
+      if (isDeleting) {
+        typedText.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 50;
+      } else {
+        typedText.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 100;
+      }
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        isDeleting = true;
+        typingSpeed = 1500; // Pause at end
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        typingSpeed = 500; // Pause before next role
+      }
+
+      setTimeout(typeWriter, typingSpeed);
+    }
+
+    // Start typing animation
+    setTimeout(typeWriter, 1000);
+
+    // Portfolio filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        // Update active button
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-white', 'text-gray-700');
+        });
+        
+        this.classList.remove('bg-white', 'text-gray-700');
+        this.classList.add('bg-primary', 'text-white');
+        
+        // Filter items
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          if (filter === 'all' || item.classList.contains(`filter-${filter}`)) {
+            item.classList.remove('hidden');
+            item.style.animation = 'fadeIn 0.5s ease-out';
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Animate skill bars on scroll
+    function animateSkillBars() {
+      const skillBars = document.querySelectorAll('.skill-bar');
+      skillBars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          bar.style.width = bar.style.width;
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener('load', animateSkillBars);
+  </script>
 </body>
-
 </html>
