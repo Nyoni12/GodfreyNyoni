@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Godfrey Nyoni | Full-Stack Developer & Data Analyst | Emerging Technology Researcher</title>
-  <meta name="description" content="Professional system developer and web developer with expertise in data analysis and emerging technologies. Specializing in full-stack development, data visualization, and innovative tech solutions.">
-  <meta name="keywords" content="system developer, web developer, full-stack developer, data analyst, emerging technologies, AI researcher, software engineer, Zimbabwe developer, data visualization">
+  <title>Godfrey Nyoni | Full-Stack Developer & Data Analyst | Systems Engineer & Technical Consultant</title>
+  <meta name="description" content="Systems Engineer, Full-Stack Developer & Data Analyst with expertise in emerging technologies, technical consultancy, and forensic systems development. Specializing in scalable applications, data visualization, and innovative tech solutions.">
+  <meta name="keywords" content="systems engineer, software developer, full-stack developer, data analyst, technical consultant, forensic systems, emerging technologies, AI researcher, cloud computing, Zimbabwe developer">
   
   <!-- Canonical URL -->
   <link rel="canonical" href="https://nyoni12.github.io/GodfreyNyoni/" />
   
   <!-- Open Graph / Social Media Meta Tags -->
-  <meta property="og:title" content="Godfrey Nyoni | Full-Stack Developer & Data Analyst">
-  <meta property="og:description" content="Professional system developer and web developer with expertise in data analysis and emerging technologies. Specializing in full-stack development and innovative tech solutions.">
+  <meta property="og:title" content="Godfrey Nyoni | Systems Engineer & Full-Stack Developer">
+  <meta property="og:description" content="Professional Systems Engineer and Developer specializing in forensic systems, web technologies, data analysis, and emerging technologies. Technical consultant for startups and enterprises.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nyoni12.github.io/GodfreyNyoni/">
   <meta property="og:image" content="https://nyoni12.github.io/GodfreyNyoni/assets/img/logo.webp">
@@ -21,8 +21,8 @@
   
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Godfrey Nyoni | Tech Developer & Researcher">
-  <meta name="twitter:description" content="System developer, web specialist, and data analyst researching emerging technologies.">
+  <meta name="twitter:title" content="Godfrey Nyoni | Systems Engineer & Tech Consultant">
+  <meta name="twitter:description" content="Systems developer, forensic systems specialist, and data analyst researching emerging technologies.">
   <meta name="twitter:image" content="https://nyoni12.github.io/GodfreyNyoni/assets/img/logo.webp">
 
   <!-- Favicons -->
@@ -44,7 +44,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Custom Tailwind Configuration -->
   <script>
@@ -52,11 +52,14 @@
       theme: {
         extend: {
           colors: {
-            primary: '#3B82F6',
-            secondary: '#1E40AF',
+            primary: '#2563EB',
+            secondary: '#1D4ED8',
             dark: '#0F172A',
             light: '#F8FAFC',
-            accent: '#06B6D4'
+            accent: '#0EA5E9',
+            success: '#10B981',
+            warning: '#F59E0B',
+            danger: '#EF4444'
           },
           fontFamily: {
             'inter': ['Inter', 'sans-serif'],
@@ -67,7 +70,9 @@
             'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             'gradient': 'gradient 8s ease infinite',
             'slide-in': 'slideIn 0.5s ease-out',
-            'fade-in': 'fadeIn 0.8s ease-out'
+            'fade-in': 'fadeIn 0.8s ease-out',
+            'bounce-slow': 'bounce 2s infinite',
+            'shimmer': 'shimmer 2s infinite'
           },
           keyframes: {
             float: {
@@ -85,36 +90,15 @@
             fadeIn: {
               '0%': { opacity: '0' },
               '100%': { opacity: '1' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' }
             }
           }
         }
       }
     }
-  </script>
-  
-  <!-- Schema.org markup for Google -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Godfrey Nyoni",
-    "url": "https://nyoni12.github.io/GodfreyNyoni/",
-    "sameAs": [
-      "https://www.linkedin.com/in/godfrey-nyoni-1166b0158/",
-      "https://github.com/nyoni12"
-    ],
-    "jobTitle": "Full-Stack Developer & Data Analyst",
-    "description": "Professional system developer specializing in web technologies, data analysis, and emerging technology research.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "Zimbabwe"
-    },
-    "hasOccupation": {
-      "@type": "Occupation",
-      "name": "Software Developer",
-      "skills": "JavaScript, Python, Data Analysis, Web Development, Emerging Technologies"
-    }
-  }
   </script>
   
   <style>
@@ -137,7 +121,7 @@
       position: absolute;
       width: 70px;
       height: 4px;
-      background: linear-gradient(90deg, #3B82F6, #06B6D4);
+      background: linear-gradient(90deg, #2563EB, #0EA5E9);
       bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
@@ -159,7 +143,7 @@
     
     .typewriter {
       overflow: hidden;
-      border-right: 3px solid #3B82F6;
+      border-right: 3px solid #2563EB;
       white-space: nowrap;
       animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
     }
@@ -171,7 +155,7 @@
     
     @keyframes blink-caret {
       from, to { border-color: transparent }
-      50% { border-color: #3B82F6; }
+      50% { border-color: #2563EB; }
     }
     
     .nav-link {
@@ -185,7 +169,7 @@
       height: 2px;
       bottom: 0;
       left: 0;
-      background-color: #3B82F6;
+      background-color: #2563EB;
       transition: width 0.3s ease;
     }
     
@@ -194,9 +178,48 @@
     }
     
     .gradient-bg {
-      background: linear-gradient(-45deg, #0F172A, #1E293B, #334155, #475569);
+      background: linear-gradient(-45deg, #0F172A, #1E293B, #334155, #0F172A);
       background-size: 400% 400%;
       animation: gradient 15s ease infinite;
+    }
+    
+    .glass-effect {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, #2563EB, #0EA5E9);
+    }
+    
+    .cert-badge {
+      background: linear-gradient(135deg, #2563EB, #0EA5E9);
+      color: white;
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    
+    .project-tag {
+      background: rgba(37, 99, 235, 0.1);
+      color: #2563EB;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    
+    .stats-card {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(14, 165, 233, 0.1));
+      border: 1px solid rgba(37, 99, 235, 0.2);
     }
   </style>
 </head>
@@ -204,14 +227,14 @@
 <body class="bg-gray-50 text-gray-800 font-inter">
   <!-- Mobile Menu Button -->
   <div class="fixed top-4 right-4 z-50 lg:hidden">
-    <button id="mobile-menu-button" class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition">
+    <button id="mobile-menu-button" class="bg-primary text-white p-3 rounded-full shadow-lg hover:bg-secondary transition transform hover:scale-110">
       <i class="fas fa-bars text-xl"></i>
     </button>
   </div>
 
   <!-- Mobile Navigation Menu -->
   <div id="mobile-menu" class="fixed inset-0 bg-dark bg-opacity-95 z-40 hidden flex flex-col justify-center items-center">
-    <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl">
+    <button id="close-menu" class="absolute top-6 right-6 text-white text-3xl hover:text-primary transition">
       <i class="fas fa-times"></i>
     </button>
     <nav class="text-center">
@@ -219,7 +242,8 @@
         <li><a href="#hero" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Home</a></li>
         <li><a href="#about" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">About</a></li>
         <li><a href="#skills" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Skills</a></li>
-        <li><a href="#resume" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Resume</a></li>
+        <li><a href="#experience" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Experience</a></li>
+        <li><a href="#education" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Education</a></li>
         <li><a href="#portfolio" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Portfolio</a></li>
         <li><a href="#services" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Services</a></li>
         <li><a href="#contact" class="text-2xl font-semibold text-white hover:text-primary transition nav-link">Contact</a></li>
@@ -228,25 +252,39 @@
   </div>
 
   <!-- Sidebar Navigation (Desktop) -->
-  <aside class="hidden lg:block fixed top-0 left-0 h-full w-64 bg-dark text-white z-30 shadow-2xl">
+  <aside class="hidden lg:block fixed top-0 left-0 h-full w-72 bg-dark text-white z-30 shadow-2xl">
     <div class="p-8 flex flex-col items-center h-full">
       <!-- Profile Image -->
       <div class="mb-8 animate-float">
-        <img src="assets/img/p2.webp" alt="Godfrey Nyoni" class="w-40 h-40 rounded-full object-cover border-4 border-primary shadow-lg">
+        <img src="assets/img/p2.webp" alt="Godfrey Nyoni - Systems Engineer & Developer" class="w-44 h-44 rounded-full object-cover border-4 border-primary shadow-2xl">
       </div>
       
-      <!-- Name -->
+      <!-- Name & Title -->
       <h1 class="text-2xl font-bold mb-2 text-center">Godfrey Nyoni</h1>
-      <p class="text-gray-400 text-sm mb-8 text-center">Full-Stack Developer & Data Analyst</p>
+      <p class="text-accent font-medium mb-1 text-center">Systems Engineer & Developer</p>
+      <p class="text-gray-400 text-sm mb-8 text-center">R4 FORENSICS | Technical Consultant</p>
+      
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 gap-4 mb-8 w-full">
+        <div class="stats-card p-4 rounded-lg text-center">
+          <p class="text-2xl font-bold">5+</p>
+          <p class="text-xs text-gray-300">Years Experience</p>
+        </div>
+        <div class="stats-card p-4 rounded-lg text-center">
+          <p class="text-2xl font-bold">50+</p>
+          <p class="text-xs text-gray-300">Projects Completed</p>
+        </div>
+      </div>
       
       <!-- Navigation -->
       <nav class="w-full mb-12">
-        <ul class="space-y-4">
+        <ul class="space-y-3">
           <li><a href="#hero" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-home mr-3"></i> Home</a></li>
           <li><a href="#about" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-user mr-3"></i> About</a></li>
           <li><a href="#skills" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-code mr-3"></i> Skills</a></li>
-          <li><a href="#resume" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-file-alt mr-3"></i> Resume</a></li>
-          <li><a href="#portfolio" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-briefcase mr-3"></i> Portfolio</a></li>
+          <li><a href="#experience" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-briefcase mr-3"></i> Experience</a></li>
+          <li><a href="#education" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-graduation-cap mr-3"></i> Education</a></li>
+          <li><a href="#portfolio" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-folder-open mr-3"></i> Portfolio</a></li>
           <li><a href="#services" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-cogs mr-3"></i> Services</a></li>
           <li><a href="#contact" class="flex items-center p-3 rounded-lg hover:bg-primary transition nav-link"><i class="fas fa-envelope mr-3"></i> Contact</a></li>
         </ul>
@@ -254,12 +292,16 @@
       
       <!-- Social Links -->
       <div class="flex space-x-4 mb-8">
-        <a href="https://x.com/GodfreyNyoni7" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/godfrey.nyoni.961" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/godfrey_nyoni_17" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/nyoni12" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition transform hover:scale-110"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/nyoni12" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition transform hover:scale-110"><i class="fab fa-github"></i></a>
+        <a href="https://x.com/GodfreyNyoni7" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition transform hover:scale-110"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/godfrey.nyoni.961" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition transform hover:scale-110"><i class="fab fa-facebook-f"></i></a>
       </div>
+      
+      <!-- Download CV Button -->
+      <a href="#contact" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-lg transition transform hover:-translate-y-1 shadow-lg text-center mb-4">
+        <i class="fas fa-download mr-2"></i> Download CV
+      </a>
       
       <!-- Copyright -->
       <p class="text-gray-500 text-sm mt-auto">© 2024 Godfrey Nyoni</p>
@@ -267,43 +309,76 @@
   </aside>
 
   <!-- Main Content -->
-  <main class="lg:ml-64">
+  <main class="lg:ml-72">
     <!-- Hero Section -->
     <section id="hero" class="gradient-bg min-h-screen flex items-center relative overflow-hidden">
       <div class="absolute inset-0 z-0">
-        <div class="absolute top-0 left-0 w-64 h-64 bg-primary rounded-full opacity-10 animate-float"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full opacity-10 animate-float" style="animation-delay: 2s;"></div>
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full opacity-5 animate-float"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full opacity-5 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-success rounded-full opacity-5 animate-float" style="animation-delay: 4s;"></div>
       </div>
       
       <div class="container mx-auto px-6 relative z-10">
         <div class="flex flex-col lg:flex-row items-center">
           <div class="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in" data-aos="fade-right">
+            <div class="inline-block mb-6">
+              <span class="cert-badge animate-pulse-slow">Currently Employed</span>
+              <span class="cert-badge bg-success ml-2">Open for Consulting</span>
+            </div>
+            
             <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6">
               Godfrey <span class="text-primary">Nyoni</span>
             </h1>
+            
             <div class="typewriter mb-8">
               <p class="text-2xl lg:text-3xl text-gray-300">
-                I'm a <span class="text-primary font-semibold" id="typed-text">Full-Stack Developer</span>
+                Systems Engineer & <span class="text-primary font-semibold" id="typed-text">Developer</span>
               </p>
             </div>
+            
             <p class="text-xl text-gray-300 mb-10 max-w-2xl">
-              Professional system developer and web developer with expertise in data analysis and emerging technologies. Specializing in full-stack development, data visualization, and innovative tech solutions.
+              Professional Systems Engineer and Developer at <span class="text-accent font-semibold">R4 FORENSICS</span> with expertise in forensic systems development, full-stack web applications, data analytics, and emerging technologies. Technical consultant specializing in scalable solutions and innovative tech implementations.
             </p>
+            
             <div class="flex flex-wrap gap-4">
-              <a href="#contact" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition transform hover:-translate-y-1 shadow-lg">
-                Get In Touch
+              <a href="#contact" class="bg-primary hover:bg-secondary text-white font-semibold py-4 px-8 rounded-lg transition transform hover:-translate-y-1 shadow-lg flex items-center">
+                <i class="fas fa-paper-plane mr-2"></i> Get In Touch
               </a>
-              <a href="#portfolio" class="bg-transparent border-2 border-white hover:border-primary text-white hover:text-primary font-semibold py-3 px-8 rounded-lg transition transform hover:-translate-y-1">
-                View My Work
+              <a href="#portfolio" class="glass-effect text-white hover:text-primary font-semibold py-4 px-8 rounded-lg transition transform hover:-translate-y-1 flex items-center">
+                <i class="fas fa-eye mr-2"></i> View My Work
               </a>
             </div>
+            
+            <!-- Current Role Badge -->
+            <div class="mt-12 p-6 glass-effect rounded-xl max-w-md">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-building text-white text-xl"></i>
+                </div>
+                <div>
+                  <p class="text-gray-300 text-sm">Currently Working At</p>
+                  <p class="text-white font-bold text-lg">R4 FORENSICS</p>
+                  <p class="text-accent text-sm">Systems Engineer & Developer</p>
+                </div>
+              </div>
+            </div>
           </div>
+          
           <div class="lg:w-1/2 flex justify-center animate-fade-in" data-aos="fade-left">
             <div class="relative">
-              <img src="assets/img/p1.webp" alt="Godfrey Nyoni" class="rounded-2xl shadow-2xl w-full max-w-lg border-8 border-white">
-              <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl">
+              <div class="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl opacity-20 blur-xl"></div>
+              <img src="assets/img/p1.webp" alt="Godfrey Nyoni - Systems Engineer & Developer" class="relative rounded-2xl shadow-2xl w-full max-w-lg border-8 border-white/20 z-10">
+              
+              <!-- Floating badges -->
+              <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-2xl z-20 animate-bounce-slow">
                 <p class="text-2xl font-bold">5+</p>
                 <p class="text-sm">Years Experience</p>
+              </div>
+              
+              <div class="absolute -top-6 -left-6 bg-accent text-white p-4 rounded-2xl shadow-2xl z-20 animate-bounce-slow" style="animation-delay: 1s;">
+                <p class="text-lg font-bold">Expert</p>
+                <p class="text-xs">Full-Stack Dev</p>
               </div>
             </div>
           </div>
@@ -323,78 +398,133 @@
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl font-bold text-dark mb-4">About Me</h2>
-          <p class="text-gray-600 max-w-3xl mx-auto">
-            👋 Hi! I'm Godfrey Nyoni, a versatile technology professional with a passion for solving complex problems and transforming data into actionable insights.
+          <p class="text-gray-600 max-w-4xl mx-auto text-lg">
+            A dedicated Systems Engineer and Full-Stack Developer with over 5 years of professional experience in building scalable applications, forensic systems, and data-driven solutions. Currently contributing to cutting-edge forensic technology at R4 FORENSICS while providing technical consultancy to various organizations.
           </p>
         </div>
 
-        <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="lg:w-1/3" data-aos="fade-right">
-            <img src="assets/img/p1.webp" alt="Godfrey Nyoni" class="rounded-2xl shadow-xl w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Core Expertise -->
+          <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200" data-aos="fade-up">
+            <div class="w-16 h-16 bg-primary text-white rounded-xl flex items-center justify-center mb-6">
+              <i class="fas fa-microscope text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Forensic Systems Specialist</h3>
+            <p class="text-gray-600">
+              Developing and maintaining advanced forensic investigation systems at R4 FORENSICS, focusing on digital evidence processing, data integrity, and secure system architectures.
+            </p>
           </div>
-          
-          <div class="lg:w-2/3" data-aos="fade-left">
-            <h3 class="text-2xl font-bold text-dark mb-6">Personal Information</h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <i class="fas fa-birthday-cake text-primary mr-4"></i>
-                  <div>
-                    <p class="font-semibold">Birthday</p>
-                    <p class="text-gray-600">17 February 1997</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-phone text-primary mr-4"></i>
-                  <div>
-                    <p class="font-semibold">Phone</p>
-                    <p class="text-gray-600">+263 712 172 870</p>
-                  </div>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-map-marker-alt text-primary mr-4"></i>
-                  <div>
-                    <p class="font-semibold">Location</p>
-                    <p class="text-gray-600">Bulawayo, Zimbabwe</p>
-                  </div>
-                </div>
-              </div>
+
+          <!-- Technical Leadership -->
+          <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-accent text-white rounded-xl flex items-center justify-center mb-6">
+              <i class="fas fa-chart-network text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Technical Consultant</h3>
+            <p class="text-gray-600">
+              Providing strategic technical guidance to startups and enterprises, specializing in system architecture, technology stack selection, and digital transformation initiatives.
+            </p>
+          </div>
+
+          <!-- Innovation -->
+          <div class="bg-gray-50 p-8 rounded-2xl border border-gray-200" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-success text-white rounded-xl flex items-center justify-center mb-6">
+              <i class="fas fa-lightbulb text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Emerging Tech Researcher</h3>
+            <p class="text-gray-600">
+              Continuously exploring and implementing emerging technologies including AI/ML, blockchain, and cloud-native solutions to solve complex business challenges.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-start gap-12">
+          <div class="lg:w-2/5" data-aos="fade-right">
+            <div class="sticky top-24">
+              <img src="assets/img/p1.webp" alt="Godfrey Nyoni - Professional Profile" class="rounded-2xl shadow-xl w-full mb-8">
               
-              <div class="space-y-4">
-                <div class="flex items-center">
-                  <i class="fas fa-envelope text-primary mr-4"></i>
-                  <div>
-                    <p class="font-semibold">Email</p>
-                    <p class="text-gray-600">godfrey12nyoni@gmail.com</p>
+              <div class="bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-2xl">
+                <h4 class="text-lg font-bold mb-4">Quick Facts</h4>
+                <div class="space-y-4">
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Experience</span>
+                    <span class="font-semibold">5+ Years</span>
                   </div>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-graduation-cap text-primary mr-4"></i>
-                  <div>
-                    <p class="font-semibold">Degree</p>
-                    <p class="text-gray-600">Bachelors</p>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Specialization</span>
+                    <span class="font-semibold">Systems Engineering</span>
                   </div>
-                </div>
-                <div class="flex items-center">
-                  <i class="fas fa-briefcase text-primary mr-4"></i>
-                  <div>
-                    <p class="font-semibold">Freelance</p>
-                    <p class="text-gray-600">Available</p>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Current Role</span>
+                    <span class="font-semibold text-primary">R4 FORENSICS</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="text-gray-600">Availability</span>
+                    <span class="font-semibold text-success">Consulting Only</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          
+          <div class="lg:w-3/5" data-aos="fade-left">
+            <h3 class="text-2xl font-bold text-dark mb-8">Professional Journey</h3>
             
-            <h3 class="text-2xl font-bold text-dark mb-6">Why Work With Me?</h3>
-            <p class="text-gray-600 mb-6">
-              I don't just write code—I collaborate to create meaningful, results-driven solutions. My experience in freelancing has taught me the value of clear communication, agility, and delivering measurable impact.
-            </p>
-            <p class="text-gray-600">
-              When I'm not developing or analyzing data, I'm exploring the latest tech trends, contributing to open-source projects, or mentoring aspiring developers.
-              <br><br>
-              Let's connect and build something amazing together!
-            </p>
+            <div class="space-y-8">
+              <div class="pl-6 border-l-4 border-primary">
+                <div class="flex items-center mb-2">
+                  <span class="bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full mr-4">Current</span>
+                  <span class="text-gray-500">August 2025 - Present</span>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Systems Engineer & Developer</h4>
+                <p class="text-primary font-medium mb-3">R4 FORENSICS</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                  <li>Developing and maintaining forensic investigation systems and digital evidence processing platforms</li>
+                  <li>Implementing secure system architectures for sensitive forensic data handling</li>
+                  <li>Designing scalable backend systems for forensic analysis tools</li>
+                  <li>Collaborating with forensic experts to translate requirements into technical solutions</li>
+                  <li>Ensuring compliance with digital evidence handling standards and regulations</li>
+                </ul>
+              </div>
+
+              <div class="pl-6 border-l-4 border-accent">
+                <div class="flex items-center mb-2">
+                  <span class="bg-accent text-white text-sm font-semibold px-3 py-1 rounded-full mr-4">Remote</span>
+                  <span class="text-gray-500">2024 - Present</span>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Software Developer & Technical Consultant</h4>
+                <p class="text-accent font-medium mb-3">Pique Squid</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                  <li>Lead development of enterprise software solutions for diverse client projects</li>
+                  <li>Provide technical consultancy on system architecture and technology stack selection</li>
+                  <li>Mentor junior developers and conduct code reviews</li>
+                  <li>Implement DevOps practices and CI/CD pipelines</li>
+                  <li>Develop RESTful APIs and microservices architectures</li>
+                </ul>
+              </div>
+
+              <div class="pl-6 border-l-4 border-success">
+                <span class="text-gray-500 block mb-2">2023 - 2025</span>
+                <h4 class="text-xl font-bold mb-2">Web Analyst & Systems Administrator</h4>
+                <p class="text-success font-medium mb-3">City of Bulawayo</p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                  <li>Managed municipal web infrastructure and digital services</li>
+                  <li>Implemented data analytics solutions for urban planning</li>
+                  <li>Optimized system performance and security protocols</li>
+                  <li>Developed internal tools for data visualization and reporting</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-12 bg-gray-50 p-8 rounded-2xl">
+              <h4 class="text-xl font-bold mb-4">Professional Philosophy</h4>
+              <p class="text-gray-600 mb-4">
+                I believe in creating technology solutions that not only solve immediate problems but also scale for future needs. My approach combines technical excellence with strategic thinking, ensuring that every solution is robust, maintainable, and aligned with business objectives.
+              </p>
+              <p class="text-gray-600">
+                With expertise spanning forensic systems, full-stack development, and technical consultancy, I bridge the gap between complex technical requirements and practical, user-centric solutions. My work at R4 FORENSICS has deepened my understanding of secure, reliable systems, while my consultancy work keeps me engaged with diverse industry challenges.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -404,101 +534,271 @@
     <section id="skills" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-bold text-dark mb-4">My Skills</h2>
+          <h2 class="text-4xl font-bold text-dark mb-4">Technical Expertise</h2>
           <p class="text-gray-600 max-w-3xl mx-auto">
-            I bring a diverse skill set that spans software development, data analytics, and research in emerging technologies.
+            A comprehensive skill set developed through years of hands-on experience in systems engineering, full-stack development, and technical consulting.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Technical Skills -->
           <div data-aos="fade-right">
-            <!-- Skill 1 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Django</span>
-                <span class="font-semibold text-primary">100%</span>
-              </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
-              </div>
-            </div>
+            <h3 class="text-2xl font-bold mb-8">Development & Engineering</h3>
             
-            <!-- Skill 2 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Python</span>
-                <span class="font-semibold text-primary">100%</span>
+            <div class="space-y-8">
+              <!-- Python & Django -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Python & Django</span>
+                  <span class="font-bold text-primary">Expert</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">Backend development, API design, system architecture</p>
               </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+
+              <!-- Forensic Systems -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Forensic Systems Development</span>
+                  <span class="font-bold text-primary">Advanced</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 95%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">Digital evidence processing, secure architectures</p>
               </div>
-            </div>
-            
-            <!-- Skill 3 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">PHP</span>
-                <span class="font-semibold text-primary">90%</span>
+
+              <!-- Data Analysis -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Data Analysis & Visualization</span>
+                  <span class="font-bold text-primary">Expert</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">Pandas, Power BI, Tableau, statistical analysis</p>
               </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
-              </div>
-            </div>
-            
-            <!-- Skill 4 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Pandas</span>
-                <span class="font-semibold text-primary">90%</span>
-              </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+
+              <!-- System Architecture -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">System Architecture</span>
+                  <span class="font-bold text-primary">Advanced</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 92%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">Scalable design, cloud integration, security protocols</p>
               </div>
             </div>
           </div>
           
+          <!-- Additional Skills -->
           <div data-aos="fade-left">
-            <!-- Skill 5 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Power BI</span>
-                <span class="font-semibold text-primary">90%</span>
+            <h3 class="text-2xl font-bold mb-8">Additional Competencies</h3>
+            
+            <div class="space-y-8">
+              <!-- Web Development -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Full-Stack Web Development</span>
+                  <span class="font-bold text-primary">Expert</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 95%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">HTML/CSS, JavaScript, React, REST APIs</p>
               </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+
+              <!-- Cloud & DevOps -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Cloud & DevOps</span>
+                  <span class="font-bold text-primary">Advanced</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 85%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">AWS, Docker, CI/CD, Infrastructure as Code</p>
+              </div>
+
+              <!-- Technical Consulting -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Technical Consulting</span>
+                  <span class="font-bold text-primary">Expert</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 90%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">Solution design, technology strategy, team mentoring</p>
+              </div>
+
+              <!-- Emerging Technologies -->
+              <div>
+                <div class="flex justify-between mb-3">
+                  <span class="font-semibold text-lg">Emerging Technologies</span>
+                  <span class="font-bold text-primary">Advanced</span>
+                </div>
+                <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 88%;"></div>
+                </div>
+                <p class="text-gray-600 text-sm mt-2">AI/ML, Blockchain, IoT, Quantum Computing Research</p>
               </div>
             </div>
-            
-            <!-- Skill 6 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">HTML/CSS</span>
-                <span class="font-semibold text-primary">100%</span>
+          </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="mt-20" data-aos="fade-up">
+          <h3 class="text-2xl font-bold mb-8 text-center">Technology Stack</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
+              <i class="fab fa-python text-4xl text-blue-600 mb-3"></i>
+              <p class="font-semibold">Python</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
+              <i class="fab fa-js text-4xl text-yellow-500 mb-3"></i>
+              <p class="font-semibold">JavaScript</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
+              <i class="fab fa-react text-4xl text-cyan-500 mb-3"></i>
+              <p class="font-semibold">React</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
+              <i class="fab fa-aws text-4xl text-orange-500 mb-3"></i>
+              <p class="font-semibold">AWS</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
+              <i class="fas fa-database text-4xl text-green-600 mb-3"></i>
+              <p class="font-semibold">SQL/NoSQL</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl text-center shadow-sm hover:shadow-md transition">
+              <i class="fas fa-chart-bar text-4xl text-purple-600 mb-3"></i>
+              <p class="font-semibold">Power BI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="section-title text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold text-dark mb-4">Professional Experience</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            A progressive career journey from web development to systems engineering and technical leadership.
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Current Role -->
+          <div class="relative pl-8 pb-12 timeline-item" data-aos="fade-right">
+            <div class="absolute left-0 top-0 w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg"></div>
+            <div class="bg-gray-50 p-8 rounded-2xl ml-4">
+              <div class="flex flex-wrap items-center gap-4 mb-4">
+                <span class="bg-primary text-white text-sm font-semibold px-3 py-1 rounded-full">Current</span>
+                <span class="text-gray-500">August 2025 - Present</span>
+                <span class="text-primary font-semibold">Full-time</span>
               </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+              <h3 class="text-2xl font-bold mb-2">Systems Engineer & Developer</h3>
+              <p class="text-primary font-medium text-lg mb-4">R4 FORENSICS</p>
+              <p class="text-gray-600 mb-6">
+                Leading the development of advanced forensic investigation systems and digital evidence processing platforms. Responsible for architecting secure, scalable solutions that meet rigorous forensic standards.
+              </p>
+              
+              <div class="mb-6">
+                <h4 class="font-bold mb-3">Key Responsibilities:</h4>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                  <li>Design and implement forensic data processing systems</li>
+                  <li>Develop secure APIs for evidence management</li>
+                  <li>Create data visualization tools for forensic analysis</li>
+                  <li>Ensure compliance with digital evidence standards</li>
+                  <li>Optimize system performance for large-scale data processing</li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-2">
+                <span class="project-tag">Forensic Systems</span>
+                <span class="project-tag">Python</span>
+                <span class="project-tag">System Architecture</span>
+                <span class="project-tag">Security</span>
+                <span class="project-tag">Data Processing</span>
               </div>
             </div>
-            
-            <!-- Skill 7 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">JavaScript</span>
-                <span class="font-semibold text-primary">75%</span>
+          </div>
+
+          <!-- Pique Squid Role -->
+          <div class="relative pl-8 pb-12 timeline-item" data-aos="fade-left">
+            <div class="absolute left-0 top-0 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg"></div>
+            <div class="bg-gray-50 p-8 rounded-2xl ml-4">
+              <div class="flex flex-wrap items-center gap-4 mb-4">
+                <span class="bg-accent text-white text-sm font-semibold px-3 py-1 rounded-full">Remote</span>
+                <span class="text-gray-500">2024 - Present</span>
+                <span class="text-accent font-semibold">Consulting</span>
               </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 75%;"></div>
+              <h3 class="text-2xl font-bold mb-2">Software Developer & Technical Consultant</h3>
+              <p class="text-accent font-medium text-lg mb-4">Pique Squid</p>
+              <p class="text-gray-600 mb-6">
+                Providing technical expertise and development services to diverse clients, from startups to enterprises. Specializing in system architecture, technology strategy, and full-stack development.
+              </p>
+              
+              <div class="mb-6">
+                <h4 class="font-bold mb-3">Key Achievements:</h4>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                  <li>Architected and deployed scalable SaaS platforms for multiple clients</li>
+                  <li>Reduced system latency by 40% through optimization strategies</li>
+                  <li>Mentored 3 junior developers to senior competency levels</li>
+                  <li>Implemented CI/CD pipelines reducing deployment time by 60%</li>
+                  <li>Consulted on technology stack selection for 10+ projects</li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-2">
+                <span class="project-tag">Consulting</span>
+                <span class="project-tag">System Architecture</span>
+                <span class="project-tag">Full-Stack</span>
+                <span class="project-tag">DevOps</span>
+                <span class="project-tag">Mentoring</span>
               </div>
             </div>
-            
-            <!-- Skill 8 -->
-            <div class="mb-8">
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold">Research</span>
-                <span class="font-semibold text-primary">100%</span>
+          </div>
+
+          <!-- City of Bulawayo Role -->
+          <div class="relative pl-8 pb-12 timeline-item" data-aos="fade-right">
+            <div class="absolute left-0 top-0 w-6 h-6 bg-success rounded-full border-4 border-white shadow-lg"></div>
+            <div class="bg-gray-50 p-8 rounded-2xl ml-4">
+              <div class="flex flex-wrap items-center gap-4 mb-4">
+                <span class="text-gray-500">2023 - 2025</span>
+                <span class="text-success font-semibold">Government</span>
               </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent skill-bar" style="width: 100%;"></div>
+              <h3 class="text-2xl font-bold mb-2">Web Analyst & Systems Administrator</h3>
+              <p class="text-success font-medium text-lg mb-4">City of Bulawayo</p>
+              <p class="text-gray-600 mb-6">
+                Managed municipal digital infrastructure and implemented data-driven solutions for urban planning and service delivery optimization.
+              </p>
+              
+              <div class="mb-6">
+                <h4 class="font-bold mb-3">Key Contributions:</h4>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                  <li>Managed municipal website with 50,000+ monthly visitors</li>
+                  <li>Developed data analytics dashboards for urban planning</li>
+                  <li>Implemented security protocols reducing incidents by 75%</li>
+                  <li>Optimized server infrastructure saving 30% in operational costs</li>
+                  <li>Trained 15 staff members on new digital tools</li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-2">
+                <span class="project-tag">Web Analytics</span>
+                <span class="project-tag">System Administration</span>
+                <span class="project-tag">Data Visualization</span>
+                <span class="project-tag">Security</span>
+                <span class="project-tag">Training</span>
               </div>
             </div>
           </div>
@@ -506,67 +806,122 @@
       </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume" class="py-20 bg-white">
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-bold text-dark mb-4">My Resume</h2>
+          <h2 class="text-4xl font-bold text-dark mb-4">Education & Certifications</h2>
           <p class="text-gray-600 max-w-3xl mx-auto">
-            Results-driven Software Engineer, Web Developer, and Data Analyst with a passion for leveraging technology to solve complex problems.
+            Academic achievements and professional certifications that form the foundation of my technical expertise.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Left Column -->
+          <!-- Education -->
           <div data-aos="fade-right">
-            <h3 class="text-2xl font-bold text-dark mb-8">Education & Certifications</h3>
+            <h3 class="text-2xl font-bold mb-8">Academic Background</h3>
             
             <div class="space-y-8">
-              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-                <h4 class="text-xl font-semibold mb-2">Bachelors Degree In Information Systems</h4>
-                <p class="text-primary font-medium mb-2">2018 - 2022</p>
-                <p class="text-gray-600">Midlands State University, Gweru, Zimbabwe</p>
-              </div>
-              
-              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-accent">
-                <h4 class="text-xl font-semibold mb-2">HCIA-Cloud Computing V4.0 Course</h4>
-                <p class="text-primary font-medium mb-2">September 2021</p>
-                <p class="text-gray-600">Huawei</p>
-              </div>
-              
-              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-                <h4 class="text-xl font-semibold mb-2">Data Analysis Industry Training</h4>
-                <p class="text-primary font-medium mb-2">June 2022</p>
-                <p class="text-gray-600">Brainnest</p>
+              <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4">
+                    <i class="fas fa-graduation-cap"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-xl font-bold">Bachelor of Science in Information Systems</h4>
+                    <p class="text-primary font-medium">First Class Honors</p>
+                    <p class="text-gray-600">Midlands State University</p>
+                    <p class="text-gray-500 text-sm">2018 - 2022</p>
+                  </div>
+                </div>
+                
+                <div class="mt-6">
+                  <h5 class="font-bold mb-3">Academic Excellence Awards:</h5>
+                  <ul class="space-y-2">
+                    <li class="flex items-center">
+                      <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                      <span>Paynow Award - Best Undergraduate Student in Department</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                      <span>NICOZ Diamond Award - Best Student in Department</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                      <span>Stanbic Award - Best Student in Information Systems</span>
+                    </li>
+                    <li class="flex items-center">
+                      <i class="fas fa-trophy text-yellow-500 mr-2"></i>
+                      <span>MSU Book Prize - Exceptional Academic Ability</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           
-          <!-- Right Column -->
+          <!-- Certifications -->
           <div data-aos="fade-left">
-            <h3 class="text-2xl font-bold text-dark mb-8">Professional Experience</h3>
+            <h3 class="text-2xl font-bold mb-8">Professional Certifications</h3>
             
-            <div class="space-y-8">
-              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary">
-                <h4 class="text-xl font-semibold mb-2">Software Engineer & Programmer</h4>
-                <p class="text-primary font-medium mb-2">2024 - Present</p>
-                <p class="text-gray-600 mb-3">Pique Squid, Harare, Zimbabwe</p>
-                <ul class="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Designing, developing, testing, and maintaining software applications</li>
-                  <li>Creating and maintaining websites</li>
-                  <li>Ensuring seamless integration of various software components</li>
-                </ul>
+            <div class="space-y-6">
+              <div class="bg-white p-6 rounded-xl border border-gray-200">
+                <div class="flex justify-between items-start mb-3">
+                  <div>
+                    <h4 class="font-bold text-lg">HCIA-Cloud Computing V4.0</h4>
+                    <p class="text-gray-600">Huawei Certified ICT Associate</p>
+                  </div>
+                  <span class="cert-badge">2021</span>
+                </div>
+                <p class="text-gray-600 text-sm">Cloud infrastructure, virtualization, and deployment strategies</p>
               </div>
-              
-              <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-accent">
-                <h4 class="text-xl font-semibold mb-2">Web Analyst Intern</h4>
-                <p class="text-primary font-medium mb-2">2023 - 2025</p>
-                <p class="text-gray-600 mb-3">City Of Bulawayo, Bulawayo, Zimbabwe</p>
-                <ul class="list-disc list-inside text-gray-600 space-y-1">
-                  <li>Web development</li>
-                  <li>Data Collection & Analysis</li>
-                  <li>Performance Monitoring</li>
-                </ul>
+
+              <div class="bg-white p-6 rounded-xl border border-gray-200">
+                <div class="flex justify-between items-start mb-3">
+                  <div>
+                    <h4 class="font-bold text-lg">Data Analysis Industry Training</h4>
+                    <p class="text-gray-600">Brainnest Professional Certification</p>
+                  </div>
+                  <span class="cert-badge">2022</span>
+                </div>
+                <p class="text-gray-600 text-sm">Advanced data analysis, visualization, and business intelligence</p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl border border-gray-200">
+                <div class="flex justify-between items-start mb-3">
+                  <div>
+                    <h4 class="font-bold text-lg">Forensic Systems Development</h4>
+                    <p class="text-gray-600">R4 FORENSICS Internal Certification</p>
+                  </div>
+                  <span class="cert-badge">2025</span>
+                </div>
+                <p class="text-gray-600 text-sm">Digital evidence handling and forensic system architecture</p>
+              </div>
+
+              <div class="bg-white p-6 rounded-xl border border-gray-200">
+                <div class="flex justify-between items-start mb-3">
+                  <div>
+                    <h4 class="font-bold text-lg">Technical Consulting Mastery</h4>
+                    <p class="text-gray-600">Pique Squid Professional Development</p>
+                  </div>
+                  <span class="cert-badge">2024</span>
+                </div>
+                <p class="text-gray-600 text-sm">Client management, solution architecture, and technical leadership</p>
+              </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="mt-12">
+              <h4 class="text-xl font-bold mb-6">Languages</h4>
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white p-4 rounded-xl text-center">
+                  <p class="font-bold text-lg">English</p>
+                  <p class="text-gray-600 text-sm">Fluent</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl text-center">
+                  <p class="font-bold text-lg">IsiNdebele</p>
+                  <p class="text-gray-600 text-sm">Native</p>
+                </div>
               </div>
             </div>
           </div>
@@ -575,171 +930,296 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 bg-gray-50">
+    <section id="portfolio" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-bold text-dark mb-4">My Portfolio</h2>
+          <h2 class="text-4xl font-bold text-dark mb-4">Portfolio & Projects</h2>
           <p class="text-gray-600 max-w-3xl mx-auto">
-            Here's a collection of projects that showcase my expertise in software development, web development, data analytics, and emerging technologies.
+            Selected projects showcasing expertise in web development, forensic systems, data analytics, and emerging technologies.
           </p>
         </div>
 
         <!-- Portfolio Filter -->
         <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
-          <button class="filter-btn bg-primary text-white px-6 py-2 rounded-full font-medium transition hover:bg-secondary" data-filter="all">All</button>
+          <button class="filter-btn bg-primary text-white px-6 py-2 rounded-full font-medium transition hover:bg-secondary" data-filter="all">All Projects</button>
           <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="web">Web Development</button>
+          <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="forensic">Forensic Systems</button>
           <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="data">Data Analytics</button>
-          <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="research">Research Articles</button>
+          <button class="filter-btn bg-white text-gray-700 px-6 py-2 rounded-full font-medium transition hover:bg-primary hover:text-white" data-filter="research">Research & Articles</button>
         </div>
 
         <!-- Portfolio Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Portfolio Item 1 -->
-          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-web" data-aos="fade-up">
+          <!-- Forensic System Project -->
+          <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 filter-forensic" data-aos="fade-up">
+            <div class="h-64 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-microscope text-white text-6xl opacity-50"></i>
+              </div>
+              <div class="absolute bottom-4 left-4">
+                <span class="bg-primary text-white text-xs font-semibold px-3 py-1 rounded-full">R4 FORENSICS</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Forensic Evidence Management System</h4>
+              <p class="text-gray-600 mb-4">Secure platform for digital evidence processing and case management</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Python</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Django</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">PostgreSQL</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Security</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">Enterprise system for forensic investigations with chain-of-custody tracking</p>
+            </div>
+          </div>
+
+          <!-- Kingdom Paints -->
+          <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 filter-web" data-aos="fade-up" data-aos-delay="100">
             <div class="h-64 overflow-hidden">
               <img src="assets/img/portfolio/web1.webp" alt="Kingdom Paints" class="w-full h-full object-cover hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
-              <h4 class="text-xl font-bold mb-2">Kingdom Paints</h4>
-              <p class="text-gray-600 mb-4">Professional paint company website</p>
+              <h4 class="text-xl font-bold mb-2">Kingdom Paints E-commerce</h4>
+              <p class="text-gray-600 mb-4">Complete online platform for paint manufacturer and retailer</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">E-commerce</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Payment Integration</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Inventory Management</span>
+              </div>
               <a href="kingdompaints.co.zw" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
-                View Project <i class="fas fa-arrow-right ml-2"></i>
+                Live Site <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
           </div>
 
-          <!-- Portfolio Item 2 -->
-          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-web" data-aos="fade-up" data-aos-delay="100">
+          <!-- Snout & Sprout -->
+          <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 filter-web" data-aos="fade-up" data-aos-delay="200">
             <div class="h-64 overflow-hidden">
               <img src="assets/img/portfolio/web2.webp" alt="Snout & Sprout" class="w-full h-full object-cover hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
-              <h4 class="text-xl font-bold mb-2">Snout & Sprout</h4>
-              <p class="text-gray-600 mb-4">Pet care and gardening e-commerce site</p>
+              <h4 class="text-xl font-bold mb-2">Snout & Sprout Marketplace</h4>
+              <p class="text-gray-600 mb-4">Pet care and gardening supplies e-commerce platform</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Multi-vendor</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">User Reviews</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Order Tracking</span>
+              </div>
               <a href="https://snoutsprout.com/" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
-                View Project <i class="fas fa-arrow-right ml-2"></i>
+                Visit Store <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
           </div>
 
-          <!-- Portfolio Item 3 -->
-          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-research" data-aos="fade-up" data-aos-delay="200">
+          <!-- Data Analytics Dashboard -->
+          <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 filter-data" data-aos="fade-up">
+            <div class="h-64 overflow-hidden bg-gradient-to-br from-blue-900 to-cyan-700 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-chart-bar text-white text-6xl opacity-50"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Business Intelligence Dashboard</h4>
+              <p class="text-gray-600 mb-4">Real-time analytics and visualization platform for enterprise data</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Power BI</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Python</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Real-time</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Predictive Analytics</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">Used by City of Bulawayo for urban planning and resource allocation</p>
+            </div>
+          </div>
+
+          <!-- AI Research Article -->
+          <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 filter-research" data-aos="fade-up" data-aos-delay="100">
             <div class="h-64 overflow-hidden">
               <img src="assets/img/portfolio/1.webp" alt="AI Article" class="w-full h-full object-cover hover:scale-110 transition duration-500">
             </div>
             <div class="p-6">
-              <h4 class="text-xl font-bold mb-2">Protecting Zim's Digital Economy</h4>
-              <p class="text-gray-600 mb-4">AI Research Article</p>
+              <h4 class="text-xl font-bold mb-2">Protecting Zimbabwe's Digital Economy</h4>
+              <p class="text-gray-600 mb-4">Research article on AI and cybersecurity for emerging markets</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">AI Research</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Cybersecurity</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Economic Analysis</span>
+              </div>
               <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/176" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
-                Read Article <i class="fas fa-arrow-right ml-2"></i>
+                Read Article <i class="fas fa-external-link-alt ml-2"></i>
               </a>
             </div>
           </div>
 
-          <!-- Portfolio Item 4 -->
-          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-data" data-aos="fade-up">
-            <div class="h-64 overflow-hidden">
-              <img src="assets/img/portfolio/data 1.webp" alt="Data Analytics" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+          <!-- Technical Consulting Project -->
+          <div class="portfolio-item bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-200 filter-web" data-aos="fade-up" data-aos-delay="200">
+            <div class="h-64 overflow-hidden bg-gradient-to-br from-purple-900 to-pink-700 relative">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="fas fa-handshake text-white text-6xl opacity-50"></i>
+              </div>
+              <div class="absolute bottom-4 left-4">
+                <span class="bg-accent text-white text-xs font-semibold px-3 py-1 rounded-full">Consulting</span>
+              </div>
             </div>
             <div class="p-6">
-              <h4 class="text-xl font-bold mb-2">Data Analytics Dashboard</h4>
-              <p class="text-gray-600 mb-4">Business intelligence dashboard</p>
-              <a href="#" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
-                View Project <i class="fas fa-arrow-right ml-2"></i>
-              </a>
+              <h4 class="text-xl font-bold mb-2">Enterprise Digital Transformation</h4>
+              <p class="text-gray-600 mb-4">Technical consultancy for legacy system modernization</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">System Architecture</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Cloud Migration</span>
+                <span class="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full">Process Optimization</span>
+              </div>
+              <p class="text-sm text-gray-500 mb-4">Led transformation for 5+ enterprises through Pique Squid consultancy</p>
             </div>
           </div>
+        </div>
 
-          <!-- Portfolio Item 5 -->
-          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-web" data-aos="fade-up" data-aos-delay="100">
-            <div class="h-64 overflow-hidden">
-              <img src="assets/img/portfolio/web5.webp" alt="Law Firm Website" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-bold mb-2">Tsunga Bamu Lawyers</h4>
-              <p class="text-gray-600 mb-4">Law firm website design</p>
-              <a href="https://nyoni12.github.io/Bamu/index.html" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
-                View Project <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Portfolio Item 6 -->
-          <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-lg filter-research" data-aos="fade-up" data-aos-delay="200">
-            <div class="h-64 overflow-hidden">
-              <img src="assets/img/portfolio/3.webp" alt="AI Article" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-            </div>
-            <div class="p-6">
-              <h4 class="text-xl font-bold mb-2">AI in Zimbabwean Business</h4>
-              <p class="text-gray-600 mb-4">Competitive AI strategies article</p>
-              <a href="https://epaper.fingaz.co.zw/subscriber/read-mac-publication/178" target="_blank" class="inline-flex items-center text-primary font-medium hover:text-secondary transition">
-                Read Article <i class="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
-          </div>
+        <!-- View More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+          <a href="#contact" class="inline-flex items-center bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition transform hover:-translate-y-1">
+            <i class="fas fa-briefcase mr-2"></i> View Complete Portfolio
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-16" data-aos="fade-up">
-          <h2 class="text-4xl font-bold text-dark mb-4">My Services</h2>
+          <h2 class="text-4xl font-bold text-dark mb-4">Professional Services</h2>
           <p class="text-gray-600 max-w-3xl mx-auto">
-            I offer a range of technology-driven solutions designed to help businesses and individuals achieve their goals.
+            Comprehensive technology solutions tailored to meet specific business needs and drive digital transformation.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Service 1 -->
-          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:border-primary transition group" data-aos="fade-up">
-            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
-              <i class="fas fa-code text-2xl"></i>
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-primary transition group hover:shadow-xl" data-aos="fade-up">
+            <div class="w-16 h-16 bg-primary text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <i class="fas fa-laptop-code text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">Web Development</h3>
-            <p class="text-gray-600">
-              Building responsive, high-performance websites and web applications with modern frameworks and best practices.
+            <h3 class="text-xl font-bold mb-4">Systems Engineering & Development</h3>
+            <p class="text-gray-600 mb-6">
+              Design, development, and maintenance of robust systems including forensic platforms, enterprise applications, and scalable architectures.
             </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                Forensic System Development
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                Enterprise Application Architecture
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-primary mr-2"></i>
+                System Security & Compliance
+              </li>
+            </ul>
           </div>
 
           <!-- Service 2 -->
-          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:border-primary transition group" data-aos="fade-up" data-aos-delay="100">
-            <div class="w-16 h-16 bg-accent text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
-              <i class="fas fa-chart-bar text-2xl"></i>
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-accent transition group hover:shadow-xl" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-accent text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <i class="fas fa-chart-line text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">Data Analytics & Big Data</h3>
-            <p class="text-gray-600">
-              Transforming raw data into valuable insights for smarter decision-making using Power BI, Tableau, and Python.
+            <h3 class="text-xl font-bold mb-4">Technical Consulting</h3>
+            <p class="text-gray-600 mb-6">
+              Strategic guidance on technology adoption, system architecture, digital transformation, and technical team leadership.
             </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Technology Strategy & Planning
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                System Architecture Design
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-accent mr-2"></i>
+                Technical Team Mentoring
+              </li>
+            </ul>
           </div>
 
           <!-- Service 3 -->
-          <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 hover:border-primary transition group" data-aos="fade-up" data-aos-delay="200">
-            <div class="w-16 h-16 bg-primary text-white rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
-              <i class="fas fa-brain text-2xl"></i>
+          <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-success transition group hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-success text-white rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+              <i class="fas fa-database text-2xl"></i>
             </div>
-            <h3 class="text-xl font-bold mb-4">Emerging Tech Research</h3>
-            <p class="text-gray-600">
-              Exploring AI, blockchain, and cloud computing to drive innovation and stay ahead of technology trends.
+            <h3 class="text-xl font-bold mb-4">Data Analytics & Intelligence</h3>
+            <p class="text-gray-600 mb-6">
+              Transform raw data into actionable insights through advanced analytics, visualization, and predictive modeling.
             </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-success mr-2"></i>
+                Business Intelligence Dashboards
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-success mr-2"></i>
+                Predictive Analytics & Modeling
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-success mr-2"></i>
+                Data Visualization Solutions
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-r from-primary/5 to-accent/5 p-8 rounded-2xl" data-aos="fade-right">
+            <h4 class="text-lg font-bold mb-4">Why Choose My Services?</h4>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i class="fas fa-star text-yellow-500 mr-3"></i>
+                <span>Proven track record with 5+ years of diverse experience</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-shield-alt text-green-500 mr-3"></i>
+                <span>Expertise in secure system development (forensic background)</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-bolt text-orange-500 mr-3"></i>
+                <span>Fast delivery without compromising quality</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-comments text-blue-500 mr-3"></i>
+                <span>Clear communication and regular updates</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gradient-to-r from-success/5 to-accent/5 p-8 rounded-2xl" data-aos="fade-left">
+            <h4 class="text-lg font-bold mb-4">Industries Served</h4>
+            <div class="flex flex-wrap gap-3">
+              <span class="bg-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm">Forensic Technology</span>
+              <span class="bg-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm">Government & Public Sector</span>
+              <span class="bg-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm">E-commerce & Retail</span>
+              <span class="bg-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm">Startups & SMEs</span>
+              <span class="bg-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm">Financial Services</span>
+              <span class="bg-white px-4 py-2 rounded-lg text-sm font-medium shadow-sm">Healthcare Technology</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-white">
       <div class="container mx-auto px-6">
         <div class="section-title text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl font-bold text-dark mb-4">Get In Touch</h2>
           <p class="text-gray-600 max-w-3xl mx-auto">
-            Have a project in mind or just want to connect? I'd love to hear from you!
+            Interested in collaborating on a project or need technical consultation? I'm available for select consulting engagements and would love to discuss how we can work together.
           </p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <!-- Contact Info -->
+          <!-- Contact Information -->
           <div data-aos="fade-right">
             <div class="space-y-8">
               <div class="flex items-start">
@@ -747,8 +1227,9 @@
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">Address</h3>
-                  <p class="text-gray-600">178 Nguboyenja, Bulawayo, Zimbabwe</p>
+                  <h3 class="text-xl font-bold mb-2">Location</h3>
+                  <p class="text-gray-600">Bulawayo, Zimbabwe</p>
+                  <p class="text-gray-500 text-sm">Available for remote work worldwide</p>
                 </div>
               </div>
 
@@ -757,9 +1238,9 @@
                   <i class="fas fa-phone"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">Call Me</h3>
-                  <p class="text-gray-600">+263 712 172 870</p>
-                  <p class="text-gray-600">+263 771 940 258</p>
+                  <h3 class="text-xl font-bold mb-2">Contact Numbers</h3>
+                  <p class="text-gray-600">+263 712 172 870 (Primary)</p>
+                  <p class="text-gray-600">+263 771 940 258 (Secondary)</p>
                 </div>
               </div>
 
@@ -768,38 +1249,107 @@
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">Email Me</h3>
+                  <h3 class="text-xl font-bold mb-2">Email Address</h3>
                   <p class="text-gray-600">godfrey12nyoni@gmail.com</p>
+                  <p class="text-gray-500 text-sm">Response within 24 hours</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-6">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2">Availability</h3>
+                  <p class="text-gray-600">Consulting: Available</p>
+                  <p class="text-gray-600">Full-time: Currently at R4 FORENSICS</p>
+                  <p class="text-success font-medium text-sm mt-2">
+                    <i class="fas fa-circle mr-1"></i> Accepting new consulting projects
+                  </p>
                 </div>
               </div>
             </div>
 
+            <!-- Professional Links -->
             <div class="mt-12">
-              <h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
+              <h4 class="text-xl font-bold mb-6">Connect Professionally</h4>
               <div class="flex space-x-4">
-                <a href="https://linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
-                  <i class="fab fa-linkedin-in"></i>
+                <a href="https://linkedin.com/in/godfrey-nyoni-1166b0158" target="_blank" class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition transform hover:scale-110">
+                  <i class="fab fa-linkedin-in text-lg"></i>
                 </a>
-                <a href="https://github.com/nyoni12" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
-                  <i class="fab fa-github"></i>
+                <a href="https://github.com/nyoni12" target="_blank" class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center hover:bg-gray-900 hover:text-white transition transform hover:scale-110">
+                  <i class="fab fa-github text-lg"></i>
                 </a>
-                <a href="https://x.com/GodfreyNyoni7" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
-                  <i class="fab fa-twitter"></i>
+                <a href="https://x.com/GodfreyNyoni7" target="_blank" class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center hover:bg-black hover:text-white transition transform hover:scale-110">
+                  <i class="fab fa-twitter text-lg"></i>
                 </a>
-                <a href="https://www.facebook.com/godfrey.nyoni.961" target="_blank" class="w-12 h-12 bg-dark text-white rounded-lg flex items-center justify-center hover:bg-primary transition">
-                  <i class="fab fa-facebook-f"></i>
+                <a href="https://www.facebook.com/godfrey.nyoni.961" target="_blank" class="w-12 h-12 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition transform hover:scale-110">
+                  <i class="fab fa-facebook-f text-lg"></i>
                 </a>
               </div>
             </div>
           </div>
-
-          <!-- Contact Image/Map Placeholder -->
-          <div data-aos="fade-left" class="flex items-center justify-center">
-            <div class="relative">
-              <img src="assets/img/logo.webp" alt="Godfrey Nyoni Logo" class="rounded-2xl shadow-xl max-w-md">
-              <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl">
-                <p class="text-lg font-bold text-dark">Available for</p>
-                <p class="text-primary font-bold text-xl">Freelance Projects</p>
+          
+          <!-- Contact Form -->
+          <div data-aos="fade-left">
+            <div class="bg-gray-50 p-8 rounded-2xl">
+              <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+              
+              <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                  </div>
+                  
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                  <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                </div>
+                
+                <div>
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                  <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition"></textarea>
+                </div>
+                
+                <div>
+                  <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Interested In</label>
+                  <select id="service" name="service" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition">
+                    <option value="">Select a service</option>
+                    <option value="systems-engineering">Systems Engineering</option>
+                    <option value="technical-consulting">Technical Consulting</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-semibold py-3 px-8 rounded-lg transition transform hover:-translate-y-1 shadow-lg">
+                  <i class="fas fa-paper-plane mr-2"></i> Send Message
+                </button>
+              </form>
+              
+              <div id="form-message" class="mt-4 text-center hidden"></div>
+            </div>
+            
+            <!-- Current Employment Notice -->
+            <div class="mt-8 bg-gradient-to-r from-primary/10 to-accent/10 p-6 rounded-2xl border border-primary/20">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-building"></i>
+                </div>
+                <div>
+                  <p class="text-gray-600 text-sm">Currently Employed Full-time</p>
+                  <p class="text-dark font-bold">R4 FORENSICS</p>
+                  <p class="text-primary text-sm">Systems Engineer & Developer</p>
+                  <p class="text-gray-500 text-xs mt-1">Available for consulting and part-time projects</p>
+                </div>
               </div>
             </div>
           </div>
@@ -809,21 +1359,35 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-8">
+  <footer class="bg-dark text-white py-12">
     <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-6 md:mb-0">
-          <p class="text-lg font-bold">Godfrey Nyoni</p>
-          <p class="text-gray-400">Full-Stack Developer & Data Analyst</p>
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <p class="text-2xl font-bold mb-2">Godfrey Nyoni</p>
+          <p class="text-gray-400">Systems Engineer & Technical Consultant</p>
+          <p class="text-gray-500 text-sm mt-2">Bridging technology and business solutions</p>
         </div>
-        <div class="text-center">
-          <p class="text-gray-400">© 2024 Godfrey Nyoni. All Rights Reserved.</p>
-          <p class="text-gray-500 text-sm mt-2">Designed & Developed by Godfrey Nyoni</p>
+        
+        <div class="flex space-x-6">
+          <a href="#hero" class="text-gray-400 hover:text-white transition">Home</a>
+          <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+          <a href="#portfolio" class="text-gray-400 hover:text-white transition">Portfolio</a>
+          <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
         </div>
-        <div>
-          <a href="#hero" class="bg-primary hover:bg-secondary text-white p-3 rounded-full inline-block transition transform hover:-translate-y-1">
-            <i class="fas fa-arrow-up"></i>
-          </a>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="text-center md:text-left mb-4 md:mb-0">
+            <p class="text-gray-500">© 2024 Godfrey Nyoni. All rights reserved.</p>
+            <p class="text-gray-600 text-sm mt-2">Designed & Developed with ❤️ by Godfrey Nyoni</p>
+          </div>
+          
+          <div class="flex items-center">
+            <a href="#hero" class="bg-primary hover:bg-secondary text-white p-3 rounded-full inline-block transition transform hover:-translate-y-1">
+              <i class="fas fa-arrow-up"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -843,11 +1407,13 @@
     document.getElementById('mobile-menu-button').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.remove('hidden');
       document.getElementById('mobile-menu').classList.add('flex');
+      document.body.style.overflow = 'hidden';
     });
 
     document.getElementById('close-menu').addEventListener('click', function() {
       document.getElementById('mobile-menu').classList.add('hidden');
       document.getElementById('mobile-menu').classList.remove('flex');
+      document.body.style.overflow = 'auto';
     });
 
     // Close mobile menu when clicking a link
@@ -855,12 +1421,13 @@
       link.addEventListener('click', function() {
         document.getElementById('mobile-menu').classList.add('hidden');
         document.getElementById('mobile-menu').classList.remove('flex');
+        document.body.style.overflow = 'auto';
       });
     });
 
     // Typing animation
     const typedText = document.getElementById('typed-text');
-    const roles = ['Full-Stack Developer', 'Data Analyst', 'Web Developer', 'Software Engineer', 'Tech Researcher'];
+    const roles = ['Developer', 'Systems Engineer', 'Technical Consultant', 'Data Analyst', 'Forensic Specialist', 'AI Researcher'];
     let roleIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -881,11 +1448,11 @@
 
       if (!isDeleting && charIndex === currentRole.length) {
         isDeleting = true;
-        typingSpeed = 1500; // Pause at end
+        typingSpeed = 1500;
       } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        typingSpeed = 500; // Pause before next role
+        typingSpeed = 500;
       }
 
       setTimeout(typeWriter, typingSpeed);
@@ -922,11 +1489,12 @@
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') === '#') return;
+        
         e.preventDefault();
         const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
         const targetElement = document.querySelector(targetId);
+        
         if (targetElement) {
           window.scrollTo({
             top: targetElement.offsetTop - 80,
@@ -949,6 +1517,33 @@
 
     window.addEventListener('scroll', animateSkillBars);
     window.addEventListener('load', animateSkillBars);
+
+    // Contact form handling
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formMessage = document.getElementById('form-message');
+      formMessage.classList.remove('hidden', 'text-red-600', 'text-green-600');
+      formMessage.classList.add('text-green-600');
+      formMessage.innerHTML = `
+        <div class="inline-flex items-center">
+          <i class="fas fa-check-circle mr-2"></i>
+          Message sent successfully! I'll get back to you within 24 hours.
+        </div>
+      `;
+      
+      // Reset form
+      this.reset();
+      
+      // Hide message after 5 seconds
+      setTimeout(() => {
+        formMessage.classList.add('hidden');
+      }, 5000);
+    });
+
+    // Update current year in footer
+    document.querySelector('footer .text-gray-500').innerHTML = 
+      document.querySelector('footer .text-gray-500').innerHTML.replace('2024', new Date().getFullYear());
   </script>
 </body>
 </html>
